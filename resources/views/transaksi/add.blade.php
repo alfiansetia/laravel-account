@@ -28,7 +28,13 @@
         </div>
         <div class="form-group">
             <label for="desc">Desc</label>
-            <input type="text" class="form-control mb-2" name="desc" id="desc" placeholder="Input Desc" required>
+            <!-- <input type="text" class="form-control mb-2" name="desc" id="desc" placeholder="Input Desc" required> -->
+            <select name="desc" id="desc" class="form-control">
+                <option value="Setor Tunai">Setor Tunai</option>
+                <option value="Beli Pulsa">Beli Pulsa</option>
+                <option value="Bayar Listrik">Bayar Listrik</option>
+                <option value="Tarik Tunai">Tarik Tunai</option>
+            </select>
             @error('desc')
             <div class="alert alert-danger" role="alert">
                 {{ $message }}
@@ -56,7 +62,7 @@
             </div>
             @enderror
         </div>
-        <a class="btn btn-warning" href="{{ route('nasabah.index') }}">Back</a>
+        <a class="btn btn-warning" href="{{ route('transaksi.index') }}">Back</a>
         <button class="btn btn-primary" type="submit">Save</button>
     </form>
 </div>

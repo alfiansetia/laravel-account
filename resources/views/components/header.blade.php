@@ -13,5 +13,8 @@
 </head>
 
 <body>
-    @include('components.navbar')
+    <div class="container-fluid">
+        @include('components.navbar')
+
+    </div>
     <div class="container mt-3">

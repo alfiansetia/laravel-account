@@ -24,5 +24,5 @@ Route::resource('nasabah', NasabahController::class)->only('index', 'create', 's
 Route::resource('transaksi', TransaksiController::class)->only('index', 'create', 'store');
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('nasabah.index'));
 });

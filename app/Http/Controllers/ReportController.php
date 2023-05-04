@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Nasabah;
 use App\Models\Transaksi;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,6 +32,27 @@ class ReportController extends Controller
         $curid = $request->id;
         $ids = Nasabah::get();
         $data = Transaksi::where('nasabah_id', $request->id)->whereBetween('date', [$from, $to])->get();
+        // $data = Transaksi::where('nasabah_id', $request->id)
+        //     ->orderBy('date')
+        //     ->get()
+        //     ->groupBy('date')
+        //     ->map(function ($data) {
+        //         $totalAmount = $data->sum('amount');
+        //         $details = $data->groupBy('status')
+        //             ->map(function ($data) {
+        //                 $totalAmountByCategory = $data->sum('amount');
+        //                 return [
+        //                     'status' => $data[0]->status,
+        //                     'total_amount' => $totalAmountByCategory,
+        //                     'transactions' => $data
+        //                 ];
+        //             });
+        //         return [
+        //             'date' => $data[0]->date,
+        //             'total_amount' => $totalAmount,
+        //             'details' => $details
+        //         ];
+        //     });
         return view('report.data', compact(['ids', 'data', 'from', 'to', 'curid']));
     }
 }

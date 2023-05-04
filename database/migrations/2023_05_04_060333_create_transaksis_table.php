@@ -18,7 +18,7 @@ return new class extends Migration
             $table->dateTime('date');
             $table->string('desc');
             $table->string('status');
-            $table->float('amount');
+            $table->integer('amount');
             $table->timestamps();
             $table->unsignedBigInteger('nasabah_id');
             $table->foreign('nasabah_id')->references('id')->on('nasabahs')->cascadeOnDelete()->cascadeOnDelete();

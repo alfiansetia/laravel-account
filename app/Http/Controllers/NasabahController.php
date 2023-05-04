@@ -36,7 +36,7 @@ class NasabahController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required']);
+        $this->validate($request, ['name' => 'required|unique:nasabahs,name']);
         Nasabah::create(['name' => $request->name]);
         return redirect(route('nasabah.index'));
     }

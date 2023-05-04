@@ -1,6 +1,5 @@
 @include('components.header')
 <a class="btn btn-primary mb-3" href="{{ route('nasabah.create')}}">Add data</a>
-<a class="btn btn-info mb-3" href="{{ route('transaksi.index')}}">Transaksi</a>
 
 <table class="table">
     <thead>
