@@ -7,7 +7,7 @@
             <th>ID</th>
             <th>Date</th>
             <th>Desc</th>
-            <th>C/D</th>
+            <th>Debit Credit</th>
             <th>Amount</th>
         </tr>
     </thead>
