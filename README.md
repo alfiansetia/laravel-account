@@ -3,7 +3,7 @@
 ## Requirement
 - PHP 8.0.2
 - Composer 2.1^
-- Internet, karena menggunakan cdn bootstrap dan untuk mengunduh dependency yang diperlukan
+- Internet, karena menggunakan cdn bootstrap dan untuk mengunduh dependency yang diperlukan saat install
 
 ## Cara Install dan run project
 - Clone Project ini 
